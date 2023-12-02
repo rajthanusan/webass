@@ -53,7 +53,9 @@
     <center>
             <div class="backgroundcolor custom-button">
 
-            
+                <button type="button" class="custom-button" onclick="cmd('italic')">
+                    <i><img src="italic-xxl.png" width="10" height="10" ></i>
+                </button>
             
 
     </center>
@@ -69,7 +71,11 @@
     
     <script>
         
-    
+    const editor = document.querySelector('.editor');
+    function cmd(command, value = null) {
+        document.execCommand(command, false, value);
+        saveState();
+    }
        
 
     </script>
